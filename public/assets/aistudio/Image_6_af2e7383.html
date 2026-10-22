@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-surface-variant": "#464555", "on-primary-fixed-variant": "#3323cc", "surface-container-highest": "#dae2fd", "inverse-on-surface": "#eef0ff", "error": "#ba1a1a", "primary": "#3525cd", "background": "#faf8ff", "primary-container": "#4f46e5", "on-primary-fixed": "#0f0069", "on-tertiary-fixed-variant": "#653e00", "tertiary-container": "#885500", "on-background": "#131b2e", "surface-bright": "#faf8ff", "secondary-container": "#39b8fd", "secondary-fixed": "#c9e6ff", "outline": "#777587", "surface-container": "#eaedff", "secondary-fixed-dim": "#89ceff", "on-primary": "#ffffff", "inverse-primary": "#c3c0ff", "outline-variant": "#c7c4d8", "tertiary": "#684000", "on-secondary": "#ffffff", "surface-variant": "#dae2fd", "surface-container-low": "#f2f3ff", "secondary": "#006591", "primary-fixed-dim": "#c3c0ff", "on-tertiary-fixed": "#2a1700", "on-secondary-fixed": "#001e2f", "on-tertiary-container": "#ffd4a4", "surface-tint": "#4d44e3", "primary-fixed": "#e2dfff", "on-tertiary": "#ffffff", "on-error": "#ffffff", "tertiary-fixed": "#ffddb8", "surface-container-high": "#e2e7ff", "tertiary-fixed-dim": "#ffb95f", "surface-dim": "#d2d9f4", "on-primary-container": "#dad7ff", "inverse-surface": "#283044", "surface": "#faf8ff", "surface-container-lowest": "#ffffff", "on-secondary-fixed-variant": "#004c6e", "on-error-container": "#93000a", "on-secondary-container": "#004666", "on-surface": "#131b2e", "error-container": "#ffdad6" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "margin-tablet": "1.5rem", "space-lg": "1.5rem", "space-xl": "2rem", "gutter": "1rem", "space-xs": "0.25rem", "space-sm": "0.5rem", "space-md": "1rem", "gutter-sm": "0.75rem", "margin-desktop": "2rem", "margin": "1rem" }, fontFamily: { "body-lg": ["Inter"], "display": ["Inter"], "label-sm": ["Inter"], "label-md": ["Inter"], "body-md": ["Inter"], "label-lg": ["Inter"], "headline-md": ["Inter"], "headline-lg-mobile": ["Inter"], "body-sm": ["Inter"], "headline-sm": ["Inter"], "headline-lg": ["Inter"] }, fontSize: { "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "display": ["34px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.02em", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "500" }], "body-md": ["15px", { "lineHeight": "22px", "fontWeight": "400" }], "label-lg": ["14px", { "lineHeight": "20px", "fontWeight": "500" }], "headline-md": ["20px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-lg-mobile": ["24px", { "lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-sm": ["13px", { "lineHeight": "18px", "fontWeight": "400" }], "headline-sm": ["17px", { "lineHeight": "22px", "letterSpacing": "-0.005em", "fontWeight": "600" }], "headline-lg": ["28px", { "lineHeight": "34px", "letterSpacing": "-0.015em", "fontWeight": "600" }] } } } }</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;min-height:100%;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs min-w-0"><button aria-label="Go back" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface hover:bg-surface-container transition-colors shrink-0" onclick="history.back()"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><img alt="TaskFlow Logo" class="h-7 w-auto object-contain shrink-0" src="https://lh3.googleusercontent.com/aida/AEtjO1W6HSrBVEGa8ZEAKVRdXnhIfbhUsLFU3isqT1IMk6ZUiWbiUCXo0QeiP8Mr9ftY5q6-jc0J-rmbQjXY6XLDFgaY-Lmtr-ZxrRIs3SNys1Ca8K77ytmSnIMzQBpcnNT4zScYjlRZhNp7GnqNau4igKg71E_nB8T8vrIvsG0WR0Wh7bA62BxYuCZbDGBo17HMbemj5y-g9sDQ_BNtHSBSAhIq-HS_gzDdGLqgGXBdVh0DIsKR4vgZpKjLLuy0"/><h1 class="font-headline-sm text-headline-sm text-on-surface truncate ml-1">Task Detail</h1></div><div class="flex items-center gap-space-xs shrink-0"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 w-full bg-surface pt-16 pb-safe"><div class="flex flex-col w-full pb-12">
+<div class="px-margin pt-space-sm pb-space-xs flex items-center justify-between gap-space-sm">
+<button class="flex items-center gap-1 text-on-surface-variant hover:text-on-surface transition-colors py-1" onclick="history.back()">
+<span class="material-symbols-outlined text-[18px]">arrow_back_ios</span>
+<span class="font-label-md text-label-md">Back to Tasks</span>
+</button>
+<div class="flex items-center gap-space-xs">
+<button class="px-3 py-1.5 rounded-full bg-primary-container text-on-primary font-label-md text-label-md shadow-sm active:scale-95 transition-all flex items-center gap-1.5" id="main-status-btn" onclick="toggleTaskStatus()">
+<span class="material-symbols-outlined text-[16px]" id="main-status-icon">check_circle</span>
+<span id="main-status-text">Mark Complete</span>
+</button>
+<button aria-label="More options" class="w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</div>
+</div>
+<div class="px-margin mt-space-sm">
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm">
+<div class="flex items-start gap-space-sm">
+<button aria-label="Toggle completed" class="w-6 h-6 rounded-full bg-surface-container flex items-center justify-center text-transparent hover:text-on-surface-variant/40 transition-all shrink-0 mt-0.5 active:scale-90" id="hero-checkbox" onclick="toggleTaskStatus()">
+<span class="material-symbols-outlined text-[16px] font-bold">check</span>
+</button>
+<div class="flex-1 min-w-0">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface leading-tight transition-all" id="task-title">
+            Review Dutch translation copy for marketing website
+          </h2>
+</div>
+</div>
+<div class="mt-space-md flex flex-wrap items-center gap-space-xs">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+<span>High Priority</span>
+</div>
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">notifications_active</span>
+<span>Today at 2:00 PM</span>
+</div>
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">tag</span>
+<span>Marketing &amp; Localization</span>
+</div>
+</div>
+</div>
+</div>
+<div class="px-margin mt-space-md">
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-primary">checklist</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Subtasks</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant" id="subtask-progress">2 of 3</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden mb-space-md">
+<div class="h-full bg-primary-container rounded-full transition-all duration-300" id="subtask-bar" style="width: 66.6%;"></div>
+</div>
+<div class="flex flex-col gap-space-xs" id="subtasks-container">
+<div class="flex items-center gap-space-sm p-2 rounded-lg hover:bg-surface-container-low transition-colors group">
+<button class="w-5 h-5 rounded-full bg-primary text-on-primary flex items-center justify-center shrink-0 transition-all subtask-check" onclick="toggleSubtask(this)">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</button>
+<span class="font-body-md text-body-md text-on-surface-variant line-through min-w-0 flex-1 subtask-label">Download Dutch copy spreadsheet (V1.4)</span>
+</div>
+<div class="flex items-center gap-space-sm p-2 rounded-lg hover:bg-surface-container-low transition-colors group">
+<button class="w-5 h-5 rounded-full bg-primary text-on-primary flex items-center justify-center shrink-0 transition-all subtask-check" onclick="toggleSubtask(this)">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</button>
+<span class="font-body-md text-body-md text-on-surface-variant line-through min-w-0 flex-1 subtask-label">Verify terminology for onboarding screens</span>
+</div>
+<div class="flex items-center gap-space-sm p-2 rounded-lg hover:bg-surface-container-low transition-colors group">
+<button class="w-5 h-5 rounded-full bg-surface-container text-transparent flex items-center justify-center shrink-0 transition-all subtask-check" onclick="toggleSubtask(this)">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</button>
+<span class="font-body-md text-body-md text-on-surface min-w-0 flex-1 subtask-label">Check button length for "Aan de slag" vs "Get Started"</span>
+</div>
+</div>
+<div class="hidden mt-space-sm pt-space-xs" id="new-subtask-form">
+<div class="flex items-center gap-space-xs bg-surface-container-low p-1.5 rounded-lg">
+<input class="bg-transparent px-2 py-1 flex-1 font-body-sm text-body-sm text-on-surface outline-none" id="subtask-input" placeholder="Write a subtask..." type="text"/>
+<button class="px-2.5 py-1 bg-primary text-on-primary rounded-lg font-label-sm text-label-sm font-semibold" onclick="submitSubtask()">Add</button>
+<button class="px-2 py-1 text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm" onclick="closeSubtaskForm()">Cancel</button>
+</div>
+</div>
+<button class="mt-space-sm flex items-center gap-1.5 text-primary hover:text-on-primary-fixed-variant font-label-md text-label-md px-2 py-1.5 rounded-lg hover:bg-surface-container-low transition-colors" id="add-subtask-btn" onclick="openSubtaskForm()">
+<span class="material-symbols-outlined text-[18px]">add</span>
+<span>Add subtask</span>
+</button>
+</div>
+</div>
+<div class="px-margin mt-space-md">
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-tertiary">notes</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Rich-Text Notes</span>
+</div>
+<button aria-label="Format options" class="text-on-surface-variant hover:text-on-surface p-1 rounded-full hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[18px]">edit_note</span>
+</button>
+</div>
+<div class="bg-surface-container-low p-space-md rounded-lg flex flex-col gap-space-xs">
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+          Make sure formal <span class="px-1.5 py-0.5 rounded bg-surface-container-highest text-on-primary-fixed-variant font-semibold text-body-sm font-body-sm">"u"</span> vs informal <span class="px-1.5 py-0.5 rounded bg-surface-container-highest text-on-primary-fixed-variant font-semibold text-body-sm font-body-sm">"je"</span> is consistent across all mobile notifications.
+        </p>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+          Dutch users prefer direct and concise action verbs. Attached reference doc below.
+        </p>
+<div class="mt-space-xs pt-space-xs flex items-center gap-2 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+<span>Last edited today at 11:42 AM</span>
+</div>
+</div>
+</div>
+</div>
+<div class="px-margin mt-space-md">
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-secondary">bookmark_added</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Attached Links</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">2 Bookmarks</span>
+</div>
+<div class="flex flex-col gap-space-sm" id="links-container">
+<a class="flex gap-space-sm bg-surface-container-low p-space-sm rounded-lg hover:bg-surface-container transition-all group" href="https://notion.so" rel="noopener noreferrer" target="_blank">
+<div class="w-20 h-20 rounded-lg overflow-hidden shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="A clean top-down desktop stationery flatlay showing minimalist typography guides and editorial books under soft warm morning daylight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCS8nHCSZuz5mHIWrGS1ICiB7v_jdpHNjf9r8dk3MRmYGC0zbd76lL8TSvZP_UUWmYPpK6PklBa8uj6hldD_oGafZ_TezG9zOuZT9AJDXQTRGhvG7wHetcAWjFDJtkVyA9ErUnvjePwbHWMNT4OW6GOFS27FBEMuKrkmJury4ywGmeMrzLI8kswq9HnO9VpoExX7EZK4l3DyA7V4NayzNs7CPkLZMnLtl2oP8Abk7V2p3eWYAWRG48Hmw"/>
+</div>
+<div class="flex-1 min-w-0 flex flex-col justify-between py-0.5">
+<div>
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-[13px]">description</span>
+<span class="font-label-sm text-label-sm truncate">notion.so/team/copy-nl</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface truncate group-hover:text-primary transition-colors mt-0.5">
+                Dutch UX Copy Guidelines - Notion
+              </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1 mt-0.5">
+                Style handbook, tone matrix, and microcopy glossary for the Benelux market.
+              </p>
+</div>
+<div class="flex items-center gap-1 text-primary font-label-sm text-label-sm pt-1">
+<span>Open document</span>
+<span class="material-symbols-outlined text-[14px]">arrow_outward</span>
+</div>
+</div>
+</a>
+<a class="flex gap-space-sm bg-surface-container-low p-space-sm rounded-lg hover:bg-surface-container transition-all group" href="https://figma.com" rel="noopener noreferrer" target="_blank">
+<div class="w-20 h-20 rounded-lg overflow-hidden shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="High quality UI/UX vector design canvas screens displaying clean mobile interface layouts in purple and indigo tones with glowing vector anchors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBv16_jcgWkXXNa7OpfllAgzUG5uQRaKdyhRCc_9BHTIQ3ZgIBLRDDwTDP9EIfoxDErBGfB0NVc-FaSaBrau7KsJrrrJgrFXPopBCDRw85C27iSsbv4JeLDdTq432YJNjFzZkxAERzcK9n4WOehe7cvTtu8VpmajT1DgQMKyGmABFX8XXxf9j-8Ud25TkUtgY4_mLpFv0EP-fVThLkt0S8a6yB3reBj0ih0dxBKouH2-cimQc4Doz6mtA"/>
+</div>
+<div class="flex-1 min-w-0 flex flex-col justify-between py-0.5">
+<div>
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-[13px]">dashboard</span>
+<span class="font-label-sm text-label-sm truncate">figma.com/file/mob-app</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface truncate group-hover:text-primary transition-colors mt-0.5">
+                Figma Localization Frames
+              </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1 mt-0.5">
+                Auto-layout dynamic width stress tests for Dutch character lengths.
+              </p>
+</div>
+<div class="flex items-center gap-1 text-primary font-label-sm text-label-sm pt-1">
+<span>View artboards</span>
+<span class="material-symbols-outlined text-[14px]">arrow_outward</span>
+</div>
+</div>
+</a>
+</div>
+<div class="hidden mt-space-sm pt-space-xs" id="new-link-form">
+<div class="flex flex-col gap-space-xs bg-surface-container-low p-3 rounded-lg">
+<input class="bg-surface-container-lowest px-3 py-2 rounded font-body-sm text-body-sm text-on-surface outline-none" id="link-url-input" placeholder="Paste URL (e.g., https://...)" type="url"/>
+<input class="bg-surface-container-lowest px-3 py-2 rounded font-body-sm text-body-sm text-on-surface outline-none" id="link-title-input" placeholder="Custom Title (optional)" type="text"/>
+<div class="flex justify-end gap-space-xs mt-1">
+<button class="px-3 py-1.5 text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm" onclick="closeLinkForm()">Cancel</button>
+<button class="px-3 py-1.5 bg-primary text-on-primary rounded-lg font-label-sm text-label-sm font-semibold" onclick="submitLink()">Attach</button>
+</div>
+</div>
+</div>
+<button class="mt-space-sm w-full py-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-primary font-label-md text-label-md flex items-center justify-center gap-1.5 transition-colors" id="add-link-btn" onclick="openLinkForm()">
+<span class="material-symbols-outlined text-[18px]">add_link</span>
+<span>Attach Web Link</span>
+</button>
+</div>
+</div>
+<div class="px-margin mt-space-lg flex items-center justify-between pt-space-sm">
+<button class="flex items-center gap-1.5 text-on-surface-variant hover:text-on-surface font-label-md text-label-md px-3 py-2 rounded-lg hover:bg-surface-container transition-colors" onclick="duplicateTask()">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+<span>Duplicate Task</span>
+</button>
+<button class="flex items-center gap-1.5 text-error hover:text-on-error-container font-label-md text-label-md px-3 py-2 rounded-lg hover:bg-error-container transition-colors" onclick="deleteTask()">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+<span>Delete Task</span>
+</button>
+</div>
+</div>
+<script>
+  let isTaskComplete = false;
+
+  function toggleTaskStatus() {
+    isTaskComplete = !isTaskComplete;
+    const title = document.getElementById('task-title');
+    const heroBtn = document.getElementById('hero-checkbox');
+    const statusBtn = document.getElementById('main-status-btn');
+    const statusText = document.getElementById('main-status-text');
+    const statusIcon = document.getElementById('main-status-icon');
+
+    if (isTaskComplete) {
+      title.classList.add('line-through', 'text-on-surface-variant');
+      heroBtn.classList.replace('bg-surface-container', 'bg-primary');
+      heroBtn.classList.replace('text-transparent', 'text-on-primary');
+      statusBtn.classList.replace('bg-primary-container', 'bg-surface-container');
+      statusBtn.classList.replace('text-on-primary', 'text-on-surface');
+      statusText.innerText = 'Completed';
+      statusIcon.innerText = 'task_alt';
+    } else {
+      title.classList.remove('line-through', 'text-on-surface-variant');
+      heroBtn.classList.replace('bg-primary', 'bg-surface-container');
+      heroBtn.classList.replace('text-on-primary', 'text-transparent');
+      statusBtn.classList.replace('bg-surface-container', 'bg-primary-container');
+      statusBtn.classList.replace('text-on-surface', 'text-on-primary');
+      statusText.innerText = 'Mark Complete';
+      statusIcon.innerText = 'check_circle';
+    }
+  }
+
+  function updateSubtaskStats() {
+    const checks = document.querySelectorAll('.subtask-check');
+    let completed = 0;
+    checks.forEach(c => {
+      if (c.classList.contains('bg-primary')) completed++;
+    });
+    const total = checks.length;
+    document.getElementById('subtask-progress').innerText = `${completed} of ${total}`;
+    const pct = total === 0 ? 0 : (completed / total) * 100;
+    document.getElementById('subtask-bar').style.width = `${pct}%`;
+  }
+
+  function toggleSubtask(btn) {
+    const label = btn.nextElementSibling;
+    const isDone = btn.classList.contains('bg-primary');
+
+    if (isDone) {
+      btn.classList.replace('bg-primary', 'bg-surface-container');
+      btn.classList.replace('text-on-primary', 'text-transparent');
+      label.classList.remove('line-through', 'text-on-surface-variant');
+      label.classList.add('text-on-surface');
+    } else {
+      btn.classList.replace('bg-surface-container', 'bg-primary');
+      btn.classList.replace('text-transparent', 'text-on-primary');
+      label.classList.add('line-through', 'text-on-surface-variant');
+      label.classList.remove('text-on-surface');
+    }
+    updateSubtaskStats();
+  }
+
+  function openSubtaskForm() {
+    document.getElementById('new-subtask-form').classList.remove('hidden');
+    document.getElementById('add-subtask-btn').classList.add('hidden');
+    document.getElementById('subtask-input').focus();
+  }
+
+  function closeSubtaskForm() {
+    document.getElementById('new-subtask-form').classList.add('hidden');
+    document.getElementById('add-subtask-btn').classList.remove('hidden');
+    document.getElementById('subtask-input').value = '';
+  }
+
+  function submitSubtask() {
+    const input = document.getElementById('subtask-input');
+    const val = input.value.trim();
+    if (!val) return;
+
+    const container = document.getElementById('subtasks-container');
+    const div = document.createElement('div');
+    div.className = 'flex items-center gap-space-sm p-2 rounded-lg hover:bg-surface-container-low transition-colors group';
+    div.innerHTML = `
+      <button onclick="toggleSubtask(this)" class="w-5 h-5 rounded-full bg-surface-container text-transparent flex items-center justify-center shrink-0 transition-all subtask-check">
+        <span class="material-symbols-outlined text-[14px]">check</span>
+      </button>
+      <span class="font-body-md text-body-md text-on-surface min-w-0 flex-1 subtask-label">${val}</span>
+    `;
+    container.appendChild(div);
+    closeSubtaskForm();
+    updateSubtaskStats();
+  }
+
+  function openLinkForm() {
+    document.getElementById('new-link-form').classList.remove('hidden');
+    document.getElementById('add-link-btn').classList.add('hidden');
+    document.getElementById('link-url-input').focus();
+  }
+
+  function closeLinkForm() {
+    document.getElementById('new-link-form').classList.add('hidden');
+    document.getElementById('add-link-btn').classList.remove('hidden');
+    document.getElementById('link-url-input').value = '';
+    document.getElementById('link-title-input').value = '';
+  }
+
+  function submitLink() {
+    const urlInput = document.getElementById('link-url-input');
+    const titleInput = document.getElementById('link-title-input');
+    const url = urlInput.value.trim();
+    if (!url) return;
+
+    let domain = 'web.link';
+    try {
+      const u = new URL(url.startsWith('http') ? url : `https://${url}`);
+      domain = u.hostname;
+    } catch(e) {}
+
+    const title = titleInput.value.trim() || domain;
+    const linksContainer = document.getElementById('links-container');
+    const a = document.createElement('a');
+    a.href = url.startsWith('http') ? url : `https://${url}`;
+    a.target = '_blank';
+    a.rel = 'noopener noreferrer';
+    a.className = 'flex gap-space-sm bg-surface-container-low p-space-sm rounded-lg hover:bg-surface-container transition-all group';
+    a.innerHTML = `
+      <div class="w-20 h-20 rounded-lg overflow-hidden shrink-0 bg-surface-container flex items-center justify-center text-primary">
+        <span class="material-symbols-outlined text-[28px]">link</span>
+      </div>
+      <div class="flex-1 min-w-0 flex flex-col justify-between py-0.5">
+        <div>
+          <div class="flex items-center gap-1 text-on-surface-variant">
+            <span class="material-symbols-outlined text-[13px]">language</span>
+            <span class="font-label-sm text-label-sm truncate">${domain}</span>
+          </div>
+          <h3 class="font-headline-sm text-headline-sm text-on-surface truncate group-hover:text-primary transition-colors mt-0.5">
+            ${title}
+          </h3>
+          <p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1 mt-0.5">
+            Attached reference link
+          </p>
+        </div>
+        <div class="flex items-center gap-1 text-primary font-label-sm text-label-sm pt-1">
+          <span>Open link</span>
+          <span class="material-symbols-outlined text-[14px]">arrow_outward</span>
+        </div>
+      </div>
+    `;
+    linksContainer.appendChild(a);
+    closeLinkForm();
+  }
+
+  function duplicateTask() {
+    alert('Task cloned successfully to today\'s workspace.');
+  }
+
+  function deleteTask() {
+    if (confirm('Are you sure you want to delete this task?')) {
+      history.back();
+    }
+  }
+</script></main></body></html>

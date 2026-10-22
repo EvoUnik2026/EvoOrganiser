@@ -1,0 +1,6 @@
+{
+  "name": "TaskFlow - Tactile Multi-Language Productivity",
+  "description": "Tactile productivity workspace for tasks, rich notes, and web bookmarks with seamless English, Dutch, and Arabic RTL localization.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

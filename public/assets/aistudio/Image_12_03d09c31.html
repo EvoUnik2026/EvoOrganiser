@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+
+<html class="h-full dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        "primary": "#c0c1ff",
+        "secondary": "#bdc2ff",
+        "inverse-on-surface": "#2e3037",
+        "surface-container": "#1e1f26",
+        "on-primary": "#1000a9",
+        "error": "#ffb4ab",
+        "primary-container": "#6366f1",
+        "on-tertiary-container": "#400071",
+        "on-surface-variant": "#94a3b8",
+        "surface-container-low": "#161820",
+        "on-error": "#690005",
+        "surface-container-high": "#242731",
+        "surface-dim": "#111319",
+        "on-primary-fixed": "#07006c",
+        "tertiary": "#ddb7ff",
+        "on-surface": "#f8fafc",
+        "inverse-surface": "#e2e2eb",
+        "on-primary-container": "#ffffff",
+        "surface-container-highest": "#2e323e",
+        "surface": "#0c0e14",
+        "secondary-fixed": "#1e293b",
+        "on-secondary-fixed": "#e2e8f0",
+        "tertiary-fixed": "#312e81",
+        "primary-fixed": "#e1e0ff",
+        "on-secondary-container": "#a8afff",
+        "outline": "#64748b",
+        "on-background": "#f8fafc",
+        "on-tertiary-fixed": "#f0dbff",
+        "secondary-container": "#38bdf8",
+        "outline-variant": "#2a2d3a",
+        "surface-tint": "#818cf8",
+        "primary-fixed-dim": "#c0c1ff",
+        "on-primary-fixed-variant": "#2f2ebe",
+        "on-tertiary-fixed-variant": "#6900b3",
+        "error-container": "#3b1219",
+        "surface-container-lowest": "#111319",
+        "tertiary-fixed-dim": "#ddb7ff",
+        "on-tertiary": "#490080",
+        "on-secondary-fixed-variant": "#94a3b8",
+        "surface-bright": "#373940",
+        "on-secondary": "#131e8c",
+        "inverse-primary": "#494bd6",
+        "secondary-fixed-dim": "#bdc2ff",
+        "tertiary-container": "#a855f7",
+        "background": "#0c0e14",
+        "surface-variant": "#1e222d",
+        "on-error-container": "#ffb4ab"
+      },
+      borderRadius: {
+        "DEFAULT": "1rem",
+        "lg": "1.25rem",
+        "xl": "1.5rem",
+        "full": "9999px"
+      },
+      spacing: {
+        "space-lg": "1.5rem",
+        "gutter-desktop": "1.5rem",
+        "space-xs": "0.25rem",
+        "margin-desktop": "2.5rem",
+        "space-sm": "0.5rem",
+        "space-md": "1rem",
+        "space-xl": "2rem",
+        "margin": "1rem",
+        "gutter": "1rem"
+      },
+      fontFamily: {
+        "label-md": ["JetBrains Mono", "monospace"],
+        "headline-lg": ["Geist", "Inter", "sans-serif"],
+        "headline-xl": ["Geist", "Inter", "sans-serif"],
+        "body-md": ["Geist", "Inter", "sans-serif"],
+        "headline-xl-mobile": ["Geist", "Inter", "sans-serif"],
+        "body-lg": ["Geist", "Inter", "sans-serif"],
+        "headline-md": ["Geist", "Inter", "sans-serif"],
+        "headline-lg-mobile": ["Geist", "Inter", "sans-serif"],
+        "label-sm": ["JetBrains Mono", "monospace"],
+        "body-sm": ["Geist", "Inter", "sans-serif"]
+      },
+      fontSize: {
+        "label-md": ["12px", { "lineHeight": "16px", "fontWeight": "500" }],
+        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+        "headline-xl": ["40px", { "lineHeight": "48px", "fontWeight": "600" }],
+        "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+        "headline-xl-mobile": ["30px", { "lineHeight": "38px", "fontWeight": "600" }],
+        "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+        "headline-md": ["20px", { "lineHeight": "26px", "fontWeight": "600" }],
+        "headline-lg-mobile": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+        "headline-sm": ["17px", { "lineHeight": "22px", "fontWeight": "600" }],
+        "label-sm": ["11px", { "lineHeight": "14px", "fontWeight": "500" }],
+        "body-sm": ["13px", { "lineHeight": "18px", "fontWeight": "400" }]
+      }
+    }
+  }
+};</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;min-height:100%;background-color:#0c0e14;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;color:#f8fafc;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}}::-webkit-scrollbar{display:none;}</style></head><body class="bg-background text-on-surface antialiased flex flex-col min-h-screen selection:bg-primary-container selection:text-white"><header class="fixed top-0 w-full z-50 bg-[#0c0e14]/90 backdrop-blur-xl pt-safe border-b border-white/[0.06]"><div class="h-16 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="TaskFlow Logo" class="h-8 w-auto object-contain shrink-0 drop-shadow-[0_0_8px_rgba(99,102,241,0.35)]" src="https://lh3.googleusercontent.com/aida/AEtjO1W6HSrBVEGa8ZEAKVRdXnhIfbhUsLFU3isqT1IMk6ZUiWbiUCXo0QeiP8Mr9ftY5q6-jc0J-rmbQjXY6XLDFgaY-Lmtr-ZxrRIs3SNys1Ca8K77ytmSnIMzQBpcnNT4zScYjlRZhNp7GnqNau4igKg71E_nB8T8vrIvsG0WR0Wh7bA62BxYuCZbDGBo17HMbemj5y-g9sDQ_BNtHSBSAhIq-HS_gzDdGLqgGXBdVh0DIsKR4vgZpKjLLuy0"/><div class="flex flex-col min-w-0"><div class="flex items-center gap-1.5"><span class="font-label-sm text-[10px] text-primary uppercase tracking-wider font-semibold">TaskFlow</span><span class="px-1.5 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-[9px] border border-white/[0.06] leading-tight">EN · NL · AR</span></div><h1 class="font-headline-sm text-headline-sm text-on-surface truncate leading-tight font-bold">Tasks</h1></div></div><div class="flex items-center gap-space-xs shrink-0"><button aria-label="Search" class="w-10 h-10 flex items-center justify-center rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high border border-white/[0.04] transition-colors"><span class="material-symbols-outlined text-[20px]">search</span></button><div class="w-9 h-9 rounded-full bg-gradient-to-tr from-primary-container to-indigo-500 flex items-center justify-center shadow-[0_0_12px_rgba(99,102,241,0.4)] border border-white/20"><span class="material-symbols-outlined text-white text-[18px]">person</span></div></div></div></header><main class="flex-1 w-full bg-background pt-16 pb-28"><div class="flex flex-col w-full pb-8">
+<section class="px-margin pt-5 pb-2">
+<div class="flex items-start justify-between">
+<div class="min-w-0">
+<p class="font-label-md text-label-md text-primary font-semibold tracking-wider uppercase">Today's Focus</p>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface font-bold tracking-tight mt-0.5">Thursday, Oct 24</h2>
+<div class="flex items-center gap-1.5 mt-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary-container shadow-[0_0_8px_rgba(56,189,248,0.8)] animate-pulse"></span>
+<p class="font-body-sm text-body-sm text-on-surface-variant font-medium">4 tasks remaining today</p>
+</div>
+</div>
+<div class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-low border border-white/[0.08] text-on-surface shadow-sm shrink-0">
+<span class="material-symbols-outlined text-[16px] text-primary">translate</span>
+<span class="font-label-sm text-[11px] font-medium tracking-tight text-on-surface-variant">EN · NL · العربية</span>
+</div>
+</div>
+</section>
+<section class="px-margin my-3">
+<div class="relative overflow-hidden rounded-2xl bg-surface-container-lowest p-4.5 border border-white/[0.08] shadow-[0_8px_24px_rgba(0,0,0,0.4)]">
+<div class="absolute -right-10 -top-10 w-32 h-32 bg-primary-container/10 rounded-full blur-2xl pointer-events-none"></div>
+<div class="flex items-center justify-between relative z-10">
+<div class="flex flex-col pr-3 flex-1 min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-primary">verified</span>
+<span class="font-label-md text-label-md font-semibold text-on-surface tracking-tight">Daily Momentum</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">3 of 4 morning priorities cleared</p>
+<div class="flex items-center gap-2 mt-2.5 flex-wrap">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/25 font-label-sm text-label-sm text-amber-300 font-semibold shadow-[0_0_10px_rgba(245,158,11,0.15)]">🔥 4-day streak</span>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-on-surface-variant bg-surface-container-high border border-white/[0.06] px-2 py-0.5 rounded-full"><span class="w-1.5 h-1.5 rounded-full bg-secondary-container shadow-[0_0_6px_rgba(56,189,248,0.7)]"></span>Ahead by 35m</span>
+</div>
+</div>
+<div class="relative w-16 h-16 flex items-center justify-center shrink-0">
+<svg class="w-16 h-16 transform -rotate-90 drop-shadow-[0_0_10px_rgba(99,102,241,0.4)]" viewbox="0 0 64 64">
+<circle class="text-surface-container-high" cx="32" cy="32" fill="none" r="26" stroke="currentColor" stroke-width="5"></circle>
+<circle class="text-primary-container transition-all duration-700 ease-out" cx="32" cy="32" fill="none" r="26" stroke="currentColor" stroke-dasharray="163.36" stroke-dashoffset="40.84" stroke-linecap="round" stroke-width="5.5"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface leading-none">75<span class="text-[11px] font-semibold text-primary">%</span></span>
+</div>
+</div>
+</div>
+<div class="mt-3.5 pt-3 border-t border-white/[0.06] flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1 font-medium"><span class="material-symbols-outlined text-[14px] text-primary">bolt</span>Target: 100% before 5:00 PM</span>
+<span class="text-primary font-semibold">1 priority left</span>
+</div>
+</div>
+</section>
+<section class="w-full my-2">
+<div class="flex items-center gap-2 px-margin overflow-x-auto no-scrollbar scroll-smooth">
+<button class="px-4 py-1.5 rounded-full bg-primary-container text-white font-label-md text-label-md font-semibold shadow-[0_0_16px_rgba(99,102,241,0.45)] shrink-0 flex items-center gap-1.5 transition-transform active:scale-95">
+<span class="">Today</span>
+<span class="px-1.5 py-0.2 rounded-full bg-white/20 text-white font-label-sm text-[11px] font-bold">4</span>
+</button>
+<button class="px-3.5 py-1.5 rounded-full bg-surface-container-low border border-white/[0.08] text-on-surface-variant hover:text-on-surface font-label-md text-label-md font-medium shrink-0 flex items-center gap-1.5 transition-colors">
+<span class="">Upcoming</span>
+<span class="px-1.5 py-0.2 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-[11px]">8</span>
+</button>
+<button class="px-3.5 py-1.5 rounded-full bg-surface-container-low border border-white/[0.08] text-on-surface-variant hover:text-on-surface font-label-md text-label-md font-medium shrink-0 transition-colors">
+        All Tasks
+      </button>
+<button class="px-3.5 py-1.5 rounded-full bg-surface-container-low border border-white/[0.08] text-on-surface-variant hover:text-on-surface font-label-md text-label-md font-medium shrink-0 flex items-center gap-1.5 transition-colors">
+<span class="">Completed</span>
+<span class="px-1.5 py-0.2 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-[11px]">12</span>
+</button>
+</div>
+</section>
+<section class="px-margin flex flex-col gap-3 mt-3"><div class="group relative bg-surface-container-lowest rounded-2xl p-4 shadow-[0_4px_16px_rgba(0,0,0,0.35)] border border-white/[0.08] hover:border-white/[0.14] transition-all active:scale-[0.99]" data-task-id="task-1">
+<div class="flex items-start gap-3">
+<button class="task-checkbox mt-0.5 w-6 h-6 rounded-full bg-surface-container-low flex items-center justify-center shrink-0 transition-all hover:border-primary-container text-transparent hover:text-on-surface-variant shadow-inner border border-white/20" onclick="toggleTask(this)">
+<span class="material-symbols-outlined text-[15px]">check</span>
+</button>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="px-2 py-0.5 rounded-full bg-rose-500/15 border border-rose-500/30 text-rose-300 font-label-sm text-label-sm font-semibold flex items-center gap-1 shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-rose-400 animate-pulse"></span> High Priority
+            </span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high border border-white/[0.06] text-on-surface-variant font-label-sm text-label-sm font-medium">#Product</span>
+<span class="text-outline font-label-sm text-label-sm flex items-center gap-0.5 ml-auto font-medium">
+<span class="material-symbols-outlined text-[14px]">schedule</span> 2:00 PM
+            </span>
+</div>
+<h3 class="task-title font-headline-sm text-headline-sm text-on-surface font-semibold mt-2 leading-snug">Review Dutch translation copy for marketing website</h3>
+<div class="flex items-center gap-2 mt-3 flex-wrap">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-purple-950/40 border border-purple-500/25 text-purple-300 font-label-sm text-label-sm font-medium shadow-sm">
+<span class="material-symbols-outlined text-[14px] text-purple-300">edit_note</span>
+<span class="">Note (2 drafts)</span>
+</div>
+<div class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-sky-950/40 border border-sky-500/25 text-sky-300 font-label-sm text-label-sm font-medium shadow-sm">
+<span class="material-symbols-outlined text-[14px]">link</span>
+<span class="">figma.com, notion.so</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="group relative bg-surface-container-lowest rounded-2xl p-4 shadow-[0_4px_16px_rgba(0,0,0,0.35)] border border-white/[0.08] hover:border-white/[0.14] transition-all active:scale-[0.99]" data-task-id="task-2">
+<div class="flex items-start gap-3">
+<button class="task-checkbox mt-0.5 w-6 h-6 rounded-full bg-surface-container-low flex items-center justify-center shrink-0 transition-all hover:border-primary-container text-transparent hover:text-on-surface-variant shadow-inner border border-white/20" onclick="toggleTask(this)">
+<span class="material-symbols-outlined text-[15px]">check</span>
+</button>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="px-2 py-0.5 rounded-full bg-cyan-500/15 border border-cyan-500/30 text-cyan-300 font-label-sm text-label-sm font-semibold shadow-sm">#Design</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high border border-white/[0.06] text-on-surface-variant font-label-sm text-label-sm font-medium">Tomorrow</span>
+<span class="text-outline font-label-sm text-label-sm ml-auto font-medium">Bi-directional UI</span>
+</div>
+<h3 class="task-title font-headline-sm text-headline-sm text-on-surface font-semibold mt-2 leading-snug">Arabic RTL typography testing on iOS &amp; Android</h3>
+<div class="flex items-center gap-2 mt-3 flex-wrap">
+<div class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-sky-950/40 border border-sky-500/25 text-sky-300 font-label-sm text-label-sm font-medium shadow-sm">
+<span class="material-symbols-outlined text-[14px]">link</span>
+<span class="">1 Link (spec.design)</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant px-2 py-0.5 rounded-md bg-surface-container-low font-mono border border-white/[0.08]">dir="rtl"</span>
+</div>
+</div>
+</div>
+</div>
+<div class="group relative bg-surface-container-lowest rounded-2xl p-4 shadow-[0_4px_16px_rgba(0,0,0,0.35)] border border-white/[0.08] hover:border-white/[0.14] transition-all active:scale-[0.99]" data-task-id="task-3">
+<div class="flex items-start gap-3">
+<button class="task-checkbox mt-0.5 w-6 h-6 rounded-full bg-surface-container-low flex items-center justify-center shrink-0 transition-all hover:border-primary-container text-transparent hover:text-on-surface-variant shadow-inner border border-white/20" onclick="toggleTask(this)">
+<span class="material-symbols-outlined text-[15px]">check</span>
+</button>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="px-2 py-0.5 rounded-full bg-purple-500/15 border border-purple-500/30 text-purple-300 font-label-sm text-label-sm font-semibold">#Engineering</span>
+<span class="px-2 py-0.5 rounded-full bg-indigo-950/40 border border-indigo-500/25 text-primary font-label-sm text-label-sm font-semibold flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[13px]">checklist</span> 2/4 subtasks done
+            </span>
+<span class="text-outline font-label-sm text-label-sm flex items-center gap-0.5 ml-auto font-medium">
+<span class="material-symbols-outlined text-[14px]">event</span> 4:30 PM
+            </span>
+</div>
+<h3 class="task-title font-headline-sm text-headline-sm text-on-surface font-semibold mt-2 leading-snug">Sync with frontend engineering team</h3>
+<div class="mt-2.5 p-2.5 rounded-xl bg-surface-container-low border border-white/[0.06] flex items-start gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary shrink-0 mt-0.5">forum</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1">Discuss Flutter &amp; Swift RTL mirroring logic and locale hydration.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="group relative bg-surface-container-lowest rounded-2xl p-4 shadow-[0_4px_16px_rgba(0,0,0,0.35)] border border-white/[0.08] hover:border-white/[0.14] transition-all active:scale-[0.99]" data-task-id="task-4">
+<div class="flex items-start gap-3">
+<button class="task-checkbox mt-0.5 w-6 h-6 rounded-full bg-surface-container-low flex items-center justify-center shrink-0 transition-all hover:border-primary-container text-transparent hover:text-on-surface-variant shadow-inner border border-white/20" onclick="toggleTask(this)">
+<span class="material-symbols-outlined text-[15px]">check</span>
+</button>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="px-2 py-0.5 rounded-full bg-amber-500/15 border border-amber-500/30 text-amber-300 font-label-sm text-label-sm font-semibold">#Release</span>
+<span class="text-outline font-label-sm text-label-sm ml-auto font-medium">Oct 26</span>
+</div>
+<h3 class="task-title font-headline-sm text-headline-sm text-on-surface font-semibold mt-2 leading-snug">Update App Store &amp; Google Play metadata</h3>
+<div class="flex items-center gap-1.5 mt-3 flex-wrap">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-low border border-white/[0.08] text-on-surface-variant font-label-sm text-label-sm font-medium shadow-sm">
+<span class="">🇳🇱 Nederlands</span>
+<span class="text-outline-variant">•</span>
+<span class="">🇸🇦 العربية</span>
+<span class="text-outline-variant">•</span>
+<span class="">🇬🇧 English</span>
+</div>
+</div>
+</div>
+</div>
+</div></section>
+<section class="px-margin mt-6">
+<div class="p-4 rounded-2xl bg-gradient-to-r from-surface-container-low to-indigo-950/20 border border-primary-container/20 flex items-center justify-between shadow-[0_4px_20px_rgba(0,0,0,0.3)]">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-container/15 border border-primary-container/30 flex items-center justify-center text-primary shrink-0 shadow-[0_0_12px_rgba(99,102,241,0.25)]">
+<span class="material-symbols-outlined text-[20px]">auto_awesome</span>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg font-semibold text-on-surface">Daily Mindful Tip</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Batch small checks together to guard uninterrupted deep work.</p>
+</div>
+</div>
+<button aria-label="Dismiss tip" class="w-8 h-8 rounded-full bg-surface-container-high border border-white/[0.08] flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors shrink-0 ml-2">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</div>
+</section>
+<aside class="sticky bottom-4 z-30 px-margin flex justify-end pointer-events-none mt-4">
+<button class="pointer-events-auto h-12 px-5 rounded-full bg-primary-container hover:bg-indigo-500 text-white shadow-[0_0_24px_rgba(99,102,241,0.5)] border border-white/20 flex items-center gap-2 active:scale-95 transition-all font-label-lg text-label-lg font-semibold tracking-wide" onclick="triggerQuickCapture()">
+<span class="material-symbols-outlined text-[20px]">add_circle</span>
+<span class="">New Task</span>
+</button>
+</aside>
+<div class="fixed bottom-20 left-1/2 -translate-x-1/2 bg-surface-container-highest text-on-surface border border-white/10 px-4 py-2.5 rounded-full shadow-[0_10px_30px_rgba(0,0,0,0.6)] font-label-md text-label-md flex items-center gap-2 opacity-0 pointer-events-none transition-all duration-300 z-50" id="toast">
+<span class="material-symbols-outlined text-[18px] text-secondary-container">check_circle</span>
+<span class="" id="toast-text">Task completed! Keep the rhythm going.</span>
+</div>
+</div>
+<script>
+  function toggleTask(button) {
+    const card = button.closest('[data-task-id]');
+    const title = card.querySelector('.task-title');
+    const isCompleted = button.classList.contains('bg-primary-container');
+
+    if (!isCompleted) {
+      button.classList.remove('bg-surface-container-low', 'text-transparent', 'border-white/20');
+      button.classList.add('bg-primary-container', 'text-white', 'border-primary-container', 'shadow-[0_0_10px_rgba(99,102,241,0.5)]');
+      title.classList.add('line-through', 'text-outline');
+      showToast('Task completed! Keep up the momentum ✨');
+    } else {
+      button.classList.remove('bg-primary-container', 'text-white', 'border-primary-container', 'shadow-[0_0_10px_rgba(99,102,241,0.5)]');
+      button.classList.add('bg-surface-container-low', 'text-transparent', 'border-white/20');
+      title.classList.remove('line-through', 'text-outline');
+    }
+  }
+
+  function triggerQuickCapture() {
+    showToast('Quick Capture active — type or dictate below');
+  }
+
+  function showToast(message) {
+    const toast = document.getElementById('toast');
+    const toastText = document.getElementById('toast-text');
+    toastText.textContent = message;
+    toast.classList.remove('opacity-0', 'pointer-events-none');
+    toast.classList.add('opacity-100', 'translate-y-[-8px]');
+
+    setTimeout(() => {
+      toast.classList.remove('opacity-100', 'translate-y-[-8px]');
+      toast.classList.add('opacity-0', 'pointer-events-none');
+    }, 2400);
+  }
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-[#0c0e14]/90 backdrop-blur-xl border-t border-white/[0.08] shadow-[0_-4px_24px_rgba(0,0,0,0.6)]" data-active-classes="text-primary font-semibold"><div class="h-16 px-margin flex items-center justify-between relative"><a aria-current="page" class="flex-1 flex flex-col items-center justify-center min-h-[44px] py-1 transition-colors text-primary font-semibold drop-shadow-[0_0_8px_rgba(192,193,255,0.4)]" data-path="tasks" href="#"><span class="material-symbols-outlined text-[24px]">check_circle</span><span class="font-label-sm text-[11px] mt-0.5">Tasks</span></a><a class="flex-1 flex flex-col items-center justify-center min-h-[44px] py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="notes-and-links" href="#"><span class="material-symbols-outlined text-[24px]">bookmarks</span><span class="font-label-sm text-[11px] mt-0.5">Notes &amp; Links</span></a><div class="flex-1 flex items-center justify-center"><a aria-label="Capture Task or Note" class="-top-4 relative flex items-center justify-center w-12 h-12 rounded-full bg-primary-container text-white shadow-[0_0_20px_rgba(99,102,241,0.6)] border border-white/20 active:scale-95 transition-transform" data-path="quick-capture" href="#"><span class="material-symbols-outlined text-[26px]">add</span></a></div><a class="flex-1 flex flex-col items-center justify-center min-h-[44px] py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="settings" href="#"><span class="material-symbols-outlined text-[24px]">tune</span><span class="font-label-sm text-[11px] mt-0.5">Settings</span></a></div></nav>
+</body></html>

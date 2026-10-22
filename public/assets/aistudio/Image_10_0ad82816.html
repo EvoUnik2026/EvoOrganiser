@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-surface-variant": "#464555", "on-primary-fixed-variant": "#3323cc", "surface-container-highest": "#dae2fd", "inverse-on-surface": "#eef0ff", "error": "#ba1a1a", "primary": "#3525cd", "background": "#faf8ff", "primary-container": "#4f46e5", "on-primary-fixed": "#0f0069", "on-tertiary-fixed-variant": "#653e00", "tertiary-container": "#885500", "on-background": "#131b2e", "surface-bright": "#faf8ff", "secondary-container": "#39b8fd", "secondary-fixed": "#c9e6ff", "outline": "#777587", "surface-container": "#eaedff", "secondary-fixed-dim": "#89ceff", "on-primary": "#ffffff", "inverse-primary": "#c3c0ff", "outline-variant": "#c7c4d8", "tertiary": "#684000", "on-secondary": "#ffffff", "surface-variant": "#dae2fd", "surface-container-low": "#f2f3ff", "secondary": "#006591", "primary-fixed-dim": "#c3c0ff", "on-tertiary-fixed": "#2a1700", "on-secondary-fixed": "#001e2f", "on-tertiary-container": "#ffd4a4", "surface-tint": "#4d44e3", "primary-fixed": "#e2dfff", "on-tertiary": "#ffffff", "on-error": "#ffffff", "tertiary-fixed": "#ffddb8", "surface-container-high": "#e2e7ff", "tertiary-fixed-dim": "#ffb95f", "surface-dim": "#d2d9f4", "on-primary-container": "#dad7ff", "inverse-surface": "#283044", "surface": "#faf8ff", "surface-container-lowest": "#ffffff", "on-secondary-fixed-variant": "#004c6e", "on-error-container": "#93000a", "on-secondary-container": "#004666", "on-surface": "#131b2e", "error-container": "#ffdad6" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "margin-tablet": "1.5rem", "space-lg": "1.5rem", "space-xl": "2rem", "gutter": "1rem", "space-xs": "0.25rem", "space-sm": "0.5rem", "space-md": "1rem", "gutter-sm": "0.75rem", "margin-desktop": "2rem", "margin": "1rem" }, fontFamily: { "body-lg": ["Inter"], "display": ["Inter"], "label-sm": ["Inter"], "label-md": ["Inter"], "body-md": ["Inter"], "label-lg": ["Inter"], "headline-md": ["Inter"], "headline-lg-mobile": ["Inter"], "body-sm": ["Inter"], "headline-sm": ["Inter"], "headline-lg": ["Inter"] }, fontSize: { "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "display": ["34px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.02em", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "500" }], "body-md": ["15px", { "lineHeight": "22px", "fontWeight": "400" }], "label-lg": ["14px", { "lineHeight": "20px", "fontWeight": "500" }], "headline-md": ["20px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-lg-mobile": ["24px", { "lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-sm": ["13px", { "lineHeight": "18px", "fontWeight": "400" }], "headline-sm": ["17px", { "lineHeight": "22px", "letterSpacing": "-0.005em", "fontWeight": "600" }], "headline-lg": ["28px", { "lineHeight": "34px", "letterSpacing": "-0.015em", "fontWeight": "600" }] } } } }</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;min-height:100%;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="TaskFlow Logo" class="h-8 w-auto object-contain shrink-0" src="https://lh3.googleusercontent.com/aida/AEtjO1W6HSrBVEGa8ZEAKVRdXnhIfbhUsLFU3isqT1IMk6ZUiWbiUCXo0QeiP8Mr9ftY5q6-jc0J-rmbQjXY6XLDFgaY-Lmtr-ZxrRIs3SNys1Ca8K77ytmSnIMzQBpcnNT4zScYjlRZhNp7GnqNau4igKg71E_nB8T8vrIvsG0WR0Wh7bA62BxYuCZbDGBo17HMbemj5y-g9sDQ_BNtHSBSAhIq-HS_gzDdGLqgGXBdVh0DIsKR4vgZpKjLLuy0"/><div class="flex flex-col min-w-0"><div class="flex items-center gap-1.5"><span class="font-label-sm text-label-sm text-primary uppercase tracking-wider font-semibold">TaskFlow</span><span class="px-1.5 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-[10px] leading-tight">EN · NL · AR</span></div><h1 class="font-headline-sm text-headline-sm text-on-surface truncate leading-tight">Notes And Links</h1></div></div><div class="flex items-center gap-space-xs shrink-0"><button aria-label="Search" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-[22px]">search</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 w-full bg-surface pt-16 pb-28"><div class="flex flex-col w-full pb-8">
+<div class="px-margin pt-space-sm space-y-space-md">
+<div class="relative flex items-center w-full">
+<div class="absolute left-3.5 flex items-center pointer-events-none text-outline">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</div>
+<input class="w-full h-11 pl-11 pr-10 rounded-full bg-surface-container-low text-on-surface font-body-md text-body-md placeholder:text-outline focus:bg-surface-container-lowest focus:shadow-md transition-all outline-none" id="library-search" placeholder="Search notes, links, URLs, and tags..." type="text"/>
+<button aria-label="Clear search" class="absolute right-3 hidden text-outline hover:text-on-surface p-1 rounded-full transition-colors" id="clear-search">
+<span class="material-symbols-outlined text-[18px]">cancel</span>
+</button>
+</div>
+<div class="flex items-center gap-space-xs overflow-x-auto no-scrollbar py-0.5 -mx-margin px-margin">
+<button class="filter-tab active-tab shrink-0 px-3.5 py-1.5 rounded-full font-label-md text-label-md bg-primary-container text-on-primary shadow-sm transition-all flex items-center gap-1.5" data-filter="all">
+<span>All</span>
+<span class="px-1.5 py-0.2 rounded-full bg-on-primary/20 text-on-primary font-label-sm text-label-sm">28</span>
+</button>
+<button class="filter-tab shrink-0 px-3.5 py-1.5 rounded-full font-label-md text-label-md bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-all flex items-center gap-1.5" data-filter="link">
+<span class="material-symbols-outlined text-[15px]">link</span>
+<span>Web Links</span>
+<span class="px-1.5 py-0.2 rounded-full bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm">16</span>
+</button>
+<button class="filter-tab shrink-0 px-3.5 py-1.5 rounded-full font-label-md text-label-md bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-all flex items-center gap-1.5" data-filter="note">
+<span class="material-symbols-outlined text-[15px]">edit_note</span>
+<span>Notes &amp; Memos</span>
+<span class="px-1.5 py-0.2 rounded-full bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm">12</span>
+</button>
+<button class="filter-tab shrink-0 px-3.5 py-1.5 rounded-full font-label-md text-label-md bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-all flex items-center gap-1.5" data-filter="favorite">
+<span class="material-symbols-outlined text-[15px]">star</span>
+<span>Bookmarked</span>
+</button>
+</div>
+<div class="flex items-center gap-1.5 overflow-x-auto no-scrollbar -mx-margin px-margin pb-1">
+<span class="font-label-sm text-label-sm text-outline shrink-0 pr-1 uppercase tracking-wider">Tags:</span>
+<button class="tag-pill shrink-0 px-2.5 py-1 rounded-lg bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm hover:bg-surface-container hover:text-on-surface active:scale-95 transition-all">#Localization</button>
+<button class="tag-pill shrink-0 px-2.5 py-1 rounded-lg bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm hover:bg-surface-container hover:text-on-surface active:scale-95 transition-all">#Design</button>
+<button class="tag-pill shrink-0 px-2.5 py-1 rounded-lg bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm hover:bg-surface-container hover:text-on-surface active:scale-95 transition-all">#Tech Specs</button>
+<button class="tag-pill shrink-0 px-2.5 py-1 rounded-lg bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm hover:bg-surface-container hover:text-on-surface active:scale-95 transition-all">#Reference</button>
+<button class="tag-pill shrink-0 px-2.5 py-1 rounded-lg bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm hover:bg-surface-container hover:text-on-surface active:scale-95 transition-all">#Arabic</button>
+<button class="tag-pill shrink-0 px-2.5 py-1 rounded-lg bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm hover:bg-surface-container hover:text-on-surface active:scale-95 transition-all">#Dutch</button>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Active Repository</span>
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-container"></span>
+<span class="font-label-sm text-label-sm text-outline">Sorted by recent</span>
+</div>
+<div class="flex items-center gap-1">
+<button class="p-1 rounded-md text-outline hover:text-on-surface transition-colors" id="view-mode-toggle" title="Toggle Compact Density">
+<span class="material-symbols-outlined text-[19px]">dashboard_customize</span>
+</button>
+</div>
+</div>
+<div class="space-y-space-md" id="library-feed">
+<article class="library-item group bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md transition-all overflow-hidden flex flex-col" data-tags="#arabic #localization #design" data-type="link">
+<div class="relative w-full h-36 overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Modern Arab calligraphy typography specimen sheet on a sleek desk with warm directional lighting, high contrast ink details, Indigo highlights, and minimalist editorial layout aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxDdUXgIYN4PvT48LKCKvpfku5vMRdYL4fF1eFfWi9CkjZwi86j1DRg2c2HnJC7U2p01tG1xPMvgx-ggQM_Pdz7W2vivq17XrkQpkB2auPFYK7v8lZnxXYV9nYBzV0Qr5eb3aoQ_yy6mRz0b3Yj9xdy5ZBl9NpWX1Le5mvmAqbEudE8JVXUpEnLSaEhwl7dZsEHQkctOk4GhsKfVwHZWtBpqhPFj0CO6J-uxoiAnSMVSmA2JI3-_PNwg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-background/70 via-transparent to-transparent"></div>
+<div class="absolute top-2.5 left-2.5 flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-surface-container-lowest/90 backdrop-blur-md shadow-sm">
+<span class="material-symbols-outlined text-[14px] text-secondary">public</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">al-dirasa.com</span>
+</div>
+<button aria-label="Bookmark link" class="bookmark-btn absolute top-2.5 right-2.5 w-8 h-8 rounded-full bg-surface-container-lowest/90 backdrop-blur-md flex items-center justify-center text-outline hover:text-tertiary shadow-sm transition-all active:scale-90">
+<span class="material-symbols-outlined text-[18px]">star</span>
+</button>
+<div class="absolute bottom-2.5 left-2.5 right-2.5 flex items-center justify-between text-on-primary">
+<span class="font-label-sm text-label-sm opacity-90">Typography Guide • 8 min read</span>
+<span class="material-symbols-outlined text-[16px] opacity-80">arrow_outward</span>
+</div>
+</div>
+<div class="p-space-md flex flex-col gap-2">
+<h2 class="font-headline-sm text-headline-sm text-on-surface leading-tight font-semibold">
+            Arabic Script &amp; Typography Guide
+          </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+            Essential principles for proportional Arabic ligatures, baseline balancing, and fluid diacritic rendering in high-density mobile UIs.
+          </p>
+<div class="pt-1 flex flex-wrap items-center gap-1.5">
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm text-label-sm">#Arabic</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm">#Localization</span>
+<div class="ml-auto flex items-center gap-1 px-2 py-0.5 rounded-md bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm font-medium">
+<span class="material-symbols-outlined text-[13px]">task_alt</span>
+<span class="truncate max-w-[130px]">RTL Testing Task</span>
+</div>
+</div>
+</div>
+</article>
+<article class="library-item bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md transition-all p-space-md flex flex-col gap-2.5" data-tags="#dutch #glossary #localization" data-type="note">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">sticky_note_2</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-tertiary font-semibold uppercase tracking-wide">Sticky Memo</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold leading-tight">
+                Dutch Idioms &amp; App Terminology
+              </h2>
+</div>
+</div>
+<button aria-label="Bookmark note" class="bookmark-btn w-8 h-8 rounded-full bg-surface-container-low flex items-center justify-center text-outline hover:text-tertiary transition-all active:scale-90">
+<span class="material-symbols-outlined text-[18px]">star</span>
+</button>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm space-y-1.5">
+<div class="font-mono text-[12px] leading-relaxed text-on-surface-variant">
+<p><span class="text-primary font-semibold">Instellingen</span> → Settings</p>
+<p><span class="text-primary font-semibold">Taken</span> → Tasks &amp; To-dos</p>
+<p><span class="text-primary font-semibold">Notities</span> → Notes &amp; Memos</p>
+<p><span class="text-primary font-semibold">Koppelingen</span> → Web Links &amp; Bookmarks</p>
+</div>
+<p class="text-outline text-[11px] pt-1 border-t-0">Note: Keep short microcopy for low-width tab titles.</p>
+</div>
+<div class="flex flex-wrap items-center gap-1.5 pt-0.5">
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm">#Dutch</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">#Glossary</span>
+<span class="ml-auto font-label-sm text-label-sm text-outline flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">schedule</span>
+<span>Edited 2h ago</span>
+</span>
+</div>
+</article>
+<article class="library-item group bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md transition-all p-space-md flex flex-col gap-2.5" data-tags="#design #tech specs #localization" data-type="link">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-10 h-10 rounded-xl bg-secondary-fixed text-on-secondary-fixed-variant flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">developer_mode_tv</span>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm text-secondary font-medium">m3.material.io</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="font-label-sm text-label-sm text-outline">Official Spec</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold truncate">
+                Material 3 RTL Layout Guidelines
+              </h2>
+</div>
+</div>
+<button aria-label="Bookmark link" class="bookmark-btn w-8 h-8 rounded-full bg-surface-container-low flex items-center justify-center text-outline hover:text-tertiary transition-all active:scale-90 shrink-0">
+<span class="material-symbols-outlined text-[18px]">star</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+          Canonical documentation detailing structural mirroring, scroll physics in bidirectional layouts, and back-gesture adaptations for Arabic locales.
+        </p>
+<div class="p-2.5 rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-2 min-w-0">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0">verified</span>
+<span class="font-label-sm text-label-sm text-on-surface truncate">Contains interactive live component test suite</span>
+</div>
+<a class="inline-flex items-center gap-0.5 text-primary font-label-sm text-label-sm font-semibold hover:underline shrink-0" href="#">
+<span>Read</span>
+<span class="material-symbols-outlined text-[14px]">open_in_new</span>
+</a>
+</div>
+<div class="flex flex-wrap items-center gap-1.5 pt-0.5">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">#Tech Specs</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">#Design</span>
+<span class="ml-auto font-label-sm text-label-sm text-outline">Synced via Chrome</span>
+</div>
+</article>
+<article class="library-item bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md transition-all p-space-md flex flex-col gap-2.5" data-tags="#tech specs #design" data-type="note">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-primary-fixed text-on-primary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">code_blocks</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-primary font-semibold uppercase tracking-wide">Technical Memo</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold leading-tight">
+                iOS Safe Area &amp; RTL layout considerations
+              </h2>
+</div>
+</div>
+<button aria-label="Bookmark note" class="bookmark-btn w-8 h-8 rounded-full bg-surface-container-low flex items-center justify-center text-outline hover:text-tertiary transition-all active:scale-90">
+<span class="material-symbols-outlined text-[18px]">star</span>
+</button>
+</div>
+<ul class="space-y-1.5 pl-1 font-body-sm text-body-sm text-on-surface-variant">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[16px] mt-0.5 shrink-0">check_small</span>
+<span>Always pair <code class="bg-surface-container px-1 py-0.5 rounded text-[11px] text-on-surface">env(safe-area-inset-bottom)</code> with FAB clearance (+56px minimum).</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[16px] mt-0.5 shrink-0">check_small</span>
+<span>Avoid physical left/right paddings; use logical start/end bindings across flex items.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[16px] mt-0.5 shrink-0">check_small</span>
+<span>Audio scrub bars &amp; video time codes remain LTR in Arabic contexts.</span>
+</li>
+</ul>
+<div class="flex flex-wrap items-center gap-1.5 pt-1">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">#Tech Specs</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">#iOS</span>
+<span class="ml-auto font-label-sm text-label-sm text-outline">Updated yesterday</span>
+</div>
+</article>
+<article class="library-item group bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md transition-all overflow-hidden flex flex-col" data-tags="#arabic #reference #design" data-type="link">
+<div class="relative w-full h-32 bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Digital font pairing specimen graphic presenting elegant Arabic typography Cairo and IBM Plex Arabic with crisp Latin alphabet glyphs beside geometric grid lines in Indigo and slate tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfz9MCasd-77OwFFkGb30rbr3okWtB_o1IQKYkSK6neVKvOKk5O2Xisqv3sgK0NWk3KNrMkOQU1nXCCGTxuEF_zdyj0fc6YmQvSjcKq-fIwKGzc8dEymzTTO7ZwZhB3-bnqBIeWVojJ1K8JW4ouJoKfFmg3Akc24rm5RSUHqRZfuHW9NoSjdDeYtWoR3bVRylCq9YXk7ALvreLfKC31sm1QZ_wXdOWuz2GumbSKdJ9ZYMmhk9KZwvYSg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-background/60 via-transparent to-transparent"></div>
+<div class="absolute top-2.5 left-2.5 flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-surface-container-lowest/90 backdrop-blur-md shadow-sm">
+<span class="material-symbols-outlined text-[14px] text-secondary">font_download</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">fonts.google.com</span>
+</div>
+<button aria-label="Bookmarked link" class="bookmark-btn active-starred absolute top-2.5 right-2.5 w-8 h-8 rounded-full bg-surface-container-lowest/90 backdrop-blur-md flex items-center justify-center text-tertiary shadow-sm transition-all active:scale-90">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</button>
+</div>
+<div class="p-space-md flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold leading-tight">
+              Cairo &amp; IBM Plex Arabic Font Pairings
+            </h2>
+<span class="material-symbols-outlined text-outline text-[16px]">arrow_outward</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Recommended webfont scale pairings balancing Latin Inter with clean Arabic open-source typefaces.
+          </p>
+<div class="pt-1 flex flex-wrap items-center gap-1.5">
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm text-label-sm">#Arabic</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">#Reference</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">#Design</span>
+<span class="ml-auto font-label-sm text-label-sm text-outline">Bookmarked</span>
+</div>
+</div>
+</article>
+</div>
+<div class="hidden flex-col items-center justify-center py-12 px-4 text-center" id="empty-state">
+<div class="w-16 h-16 rounded-full bg-surface-container flex items-center justify-center text-outline mb-3">
+<span class="material-symbols-outlined text-[32px]">folder_off</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">No matching references</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-[260px] mt-1">
+        Try adjusting your search query or switching the category filter above.
+      </p>
+<button class="mt-4 px-4 py-2 rounded-full bg-primary-container text-on-primary font-label-md text-label-md hover:bg-primary transition-all" id="reset-filter-btn">
+        Reset filters
+      </button>
+</div>
+</div>
+<div class="sticky bottom-4 z-30 px-margin flex items-center justify-center gap-2 mt-4 pointer-events-none">
+<div class="flex items-center gap-2 p-1.5 rounded-full bg-surface-container-lowest/95 backdrop-blur-md shadow-xl pointer-events-auto">
+<button class="flex items-center gap-1.5 px-4 h-11 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-lg text-label-lg active:scale-95 transition-all" id="btn-new-link">
+<span class="material-symbols-outlined text-primary text-[20px]">add_link</span>
+<span>New Link</span>
+</button>
+<button class="flex items-center gap-1.5 px-4 h-11 rounded-full bg-primary-container hover:bg-primary text-on-primary font-label-lg text-label-lg shadow-md active:scale-95 transition-all" id="btn-new-note">
+<span class="material-symbols-outlined text-[20px]">edit_note</span>
+<span>New Note</span>
+</button>
+</div>
+</div>
+<div class="fixed inset-0 z-50 bg-inverse-surface/40 backdrop-blur-sm hidden items-end sm:items-center justify-center p-0 sm:p-4 transition-opacity" id="quick-create-modal">
+<div class="w-full max-w-lg bg-surface-container-lowest rounded-t-2xl sm:rounded-2xl shadow-2xl p-space-lg flex flex-col gap-space-md animate-in fade-in slide-in-from-bottom duration-200">
+<div class="w-10 h-1 rounded-full bg-outline-variant self-center -mt-2 mb-1 sm:hidden"></div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[24px]" id="modal-icon">bookmark_add</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold" id="modal-title">Save New Item</h2>
+</div>
+<button class="w-8 h-8 rounded-full flex items-center justify-center text-outline hover:text-on-surface bg-surface-container-low" id="modal-close-btn">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<div class="flex flex-col gap-3">
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-1 uppercase tracking-wide">Title or Reference Name</label>
+<input class="w-full h-11 px-3.5 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md outline-none focus:bg-surface-container-lowest transition-colors" id="modal-input-title" placeholder="e.g. Dutch Translation Cheatsheet" type="text"/>
+</div>
+<div id="modal-url-group">
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-1 uppercase tracking-wide">Target Web URL</label>
+<input class="w-full h-11 px-3.5 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md outline-none focus:bg-surface-container-lowest transition-colors" id="modal-input-url" placeholder="https://developer.apple.com/..." type="url"/>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-1 uppercase tracking-wide">Notes &amp; Markdown Excerpt</label>
+<textarea class="w-full p-3 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm outline-none focus:bg-surface-container-lowest resize-none transition-colors" id="modal-input-notes" placeholder="Add context, key bullet points, or translation notes..." rows="3"></textarea>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-1 uppercase tracking-wide">Assign Tags</label>
+<div class="flex flex-wrap gap-1.5">
+<button class="modal-tag-chip px-2.5 py-1 rounded-md bg-surface-container text-on-surface-variant font-label-sm text-label-sm hover:bg-primary-container hover:text-on-primary transition-all" type="button">#Arabic</button>
+<button class="modal-tag-chip px-2.5 py-1 rounded-md bg-surface-container text-on-surface-variant font-label-sm text-label-sm hover:bg-primary-container hover:text-on-primary transition-all" type="button">#Dutch</button>
+<button class="modal-tag-chip px-2.5 py-1 rounded-md bg-surface-container text-on-surface-variant font-label-sm text-label-sm hover:bg-primary-container hover:text-on-primary transition-all" type="button">#Design</button>
+<button class="modal-tag-chip px-2.5 py-1 rounded-md bg-surface-container text-on-surface-variant font-label-sm text-label-sm hover:bg-primary-container hover:text-on-primary transition-all" type="button">#Tech Specs</button>
+</div>
+</div>
+</div>
+<div class="pt-2 flex items-center justify-end gap-2">
+<button class="px-4 py-2.5 rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container transition-all" id="modal-cancel-btn">
+          Cancel
+        </button>
+<button class="px-5 py-2.5 rounded-lg font-label-lg text-label-lg bg-primary-container text-on-primary hover:bg-primary shadow-sm active:scale-95 transition-all" id="modal-save-btn">
+          Save Item
+        </button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    const searchInput = document.getElementById('library-search');
+    const clearSearchBtn = document.getElementById('clear-search');
+    const filterTabs = document.querySelectorAll('.filter-tab');
+    const tagPills = document.querySelectorAll('.tag-pill');
+    const libraryItems = document.querySelectorAll('.library-item');
+    const emptyState = document.getElementById('empty-state');
+    const resetFilterBtn = document.getElementById('reset-filter-btn');
+
+    let activeFilterType = 'all';
+    let activeTag = null;
+
+    function applyFilters() {
+      const query = (searchInput.value || '').trim().toLowerCase();
+      let visibleCount = 0;
+
+      libraryItems.forEach(item => {
+        const itemType = item.getAttribute('data-type');
+        const itemTags = item.getAttribute('data-tags') || '';
+        const isStarred = item.querySelector('.bookmark-btn')?.classList.contains('active-starred');
+        const itemText = item.innerText.toLowerCase();
+
+        const matchesQuery = query === '' || itemText.includes(query);
+        let matchesType = true;
+
+        if (activeFilterType === 'link') matchesType = (itemType === 'link');
+        else if (activeFilterType === 'note') matchesType = (itemType === 'note');
+        else if (activeFilterType === 'favorite') matchesType = !!isStarred;
+
+        const matchesTag = !activeTag || itemTags.includes(activeTag.toLowerCase());
+
+        if (matchesQuery && matchesType && matchesTag) {
+          item.style.display = 'flex';
+          visibleCount++;
+        } else {
+          item.style.display = 'none';
+        }
+      });
+
+      if (visibleCount === 0) {
+        emptyState.classList.remove('hidden');
+        emptyState.classList.add('flex');
+      } else {
+        emptyState.classList.add('hidden');
+        emptyState.classList.remove('flex');
+      }
+
+      if (query.length > 0) {
+        clearSearchBtn.classList.remove('hidden');
+      } else {
+        clearSearchBtn.classList.add('hidden');
+      }
+    }
+
+    searchInput.addEventListener('input', applyFilters);
+
+    clearSearchBtn.addEventListener('click', () => {
+      searchInput.value = '';
+      applyFilters();
+      searchInput.focus();
+    });
+
+    filterTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        filterTabs.forEach(t => {
+          t.classList.remove('bg-primary-container', 'text-on-primary', 'shadow-sm');
+          t.classList.add('bg-surface-container', 'text-on-surface-variant');
+        });
+        tab.classList.remove('bg-surface-container', 'text-on-surface-variant');
+        tab.classList.add('bg-primary-container', 'text-on-primary', 'shadow-sm');
+
+        activeFilterType = tab.getAttribute('data-filter');
+        applyFilters();
+      });
+    });
+
+    tagPills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        const tagText = pill.innerText.trim();
+        if (activeTag === tagText) {
+          activeTag = null;
+          pill.classList.remove('bg-primary-container', 'text-on-primary');
+          pill.classList.add('bg-surface-container-low', 'text-on-surface-variant');
+        } else {
+          tagPills.forEach(p => {
+            p.classList.remove('bg-primary-container', 'text-on-primary');
+            p.classList.add('bg-surface-container-low', 'text-on-surface-variant');
+          });
+          activeTag = tagText;
+          pill.classList.remove('bg-surface-container-low', 'text-on-surface-variant');
+          pill.classList.add('bg-primary-container', 'text-on-primary');
+        }
+        applyFilters();
+      });
+    });
+
+    resetFilterBtn.addEventListener('click', () => {
+      searchInput.value = '';
+      activeTag = null;
+      activeFilterType = 'all';
+
+      tagPills.forEach(p => {
+        p.classList.remove('bg-primary-container', 'text-on-primary');
+        p.classList.add('bg-surface-container-low', 'text-on-surface-variant');
+      });
+
+      filterTabs.forEach((t, i) => {
+        if (i === 0) {
+          t.classList.add('bg-primary-container', 'text-on-primary', 'shadow-sm');
+          t.classList.remove('bg-surface-container', 'text-on-surface-variant');
+        } else {
+          t.classList.remove('bg-primary-container', 'text-on-primary', 'shadow-sm');
+          t.classList.add('bg-surface-container', 'text-on-surface-variant');
+        }
+      });
+
+      applyFilters();
+    });
+
+    document.querySelectorAll('.bookmark-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const icon = btn.querySelector('.material-symbols-outlined');
+        const isStarred = btn.classList.contains('active-starred');
+
+        if (isStarred) {
+          btn.classList.remove('active-starred', 'text-tertiary');
+          btn.classList.add('text-outline');
+          icon.style.fontVariationSettings = "'FILL' 0";
+        } else {
+          btn.classList.add('active-starred', 'text-tertiary');
+          btn.classList.remove('text-outline');
+          icon.style.fontVariationSettings = "'FILL' 1";
+        }
+        if (activeFilterType === 'favorite') {
+          applyFilters();
+        }
+      });
+    });
+
+    const modal = document.getElementById('quick-create-modal');
+    const btnNewLink = document.getElementById('btn-new-link');
+    const btnNewNote = document.getElementById('btn-new-note');
+    const modalCloseBtn = document.getElementById('modal-close-btn');
+    const modalCancelBtn = document.getElementById('modal-cancel-btn');
+    const modalSaveBtn = document.getElementById('modal-save-btn');
+    const modalTitle = document.getElementById('modal-title');
+    const modalIcon = document.getElementById('modal-icon');
+    const modalUrlGroup = document.getElementById('modal-url-group');
+
+    function openModal(mode) {
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      if (mode === 'link') {
+        modalTitle.textContent = 'Capture Web Reference';
+        modalIcon.textContent = 'link';
+        modalUrlGroup.classList.remove('hidden');
+        document.getElementById('modal-input-title').placeholder = 'e.g. Flutter RTL Localization Guide';
+      } else {
+        modalTitle.textContent = 'Compose New Note';
+        modalIcon.textContent = 'edit_note';
+        modalUrlGroup.classList.add('hidden');
+        document.getElementById('modal-input-title').placeholder = 'e.g. Arabic & Dutch Key Terms';
+      }
+    }
+
+    function closeModal() {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    btnNewLink.addEventListener('click', () => openModal('link'));
+    btnNewNote.addEventListener('click', () => openModal('note'));
+    modalCloseBtn.addEventListener('click', closeModal);
+    modalCancelBtn.addEventListener('click', closeModal);
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeModal();
+    });
+
+    modalSaveBtn.addEventListener('click', () => {
+      const saveBtn = modalSaveBtn;
+      saveBtn.innerHTML = '<span class="material-symbols-outlined text-[18px] animate-spin">sync</span> Saving...';
+      setTimeout(() => {
+        saveBtn.innerHTML = 'Save Item';
+        closeModal();
+      }, 350);
+    });
+
+    document.querySelectorAll('.modal-tag-chip').forEach(chip => {
+      chip.addEventListener('click', () => {
+        chip.classList.toggle('bg-primary-container');
+        chip.classList.toggle('text-on-primary');
+      });
+    });
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/85 backdrop-blur-xl shadow-[0_-4px_20px_rgba(15,23,42,0.06)]" data-active-classes="text-primary font-semibold"><div class="h-16 px-margin flex items-center justify-between relative"><a class="flex-1 flex flex-col items-center justify-center min-h-[44px] py-1 text-on-surface-variant transition-colors" data-path="tasks" href="#"><span class="material-symbols-outlined text-[24px]">check_circle</span><span class="font-label-sm text-label-sm mt-0.5">Tasks</span></a><a aria-current="page" class="flex-1 flex flex-col items-center justify-center min-h-[44px] py-1 transition-colors text-primary font-semibold" data-path="notes-and-links" href="#"><span class="material-symbols-outlined text-[24px]">bookmarks</span><span class="font-label-sm text-label-sm mt-0.5">Notes &amp; Links</span></a><div class="flex-1 flex items-center justify-center"><a aria-label="Capture Task or Note" class="-top-4 relative flex items-center justify-center w-12 h-12 rounded-full bg-primary-container text-on-primary shadow-lg shadow-primary/30 active:scale-95 transition-transform" data-path="quick-capture" href="#"><span class="material-symbols-outlined text-[26px]">add</span></a></div><a class="flex-1 flex flex-col items-center justify-center min-h-[44px] py-1 text-on-surface-variant transition-colors" data-path="settings" href="#"><span class="material-symbols-outlined text-[24px]">tune</span><span class="font-label-sm text-label-sm mt-0.5">Settings</span></a></div></nav></body></html>
